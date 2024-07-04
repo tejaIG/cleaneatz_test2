@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      src="https://kit.fontawesome.com/88750aa7b6.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <style>
+        .c-image {
+            height: 400px;
+            width: 100%;
+        }
+
+.tourism3-detailed-view-card-container {
+    background-color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+}
+
+.tourism3-detailed-view-text-container {
+    padding: 5px;
+}
+
+.tourism3-detailed-view-text-container-head {
+    font-family: "roboto";
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.tourism3-detailed-view-text-container-paragraph {
+    font-family: "roboto";
+    font-size: 10px;
+
+}
+
+      .bottom-container {
+        background-color: #2ed94d;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+        margin: 0%;
+      }
+      .color-background {
+        background-color: white;
+        overflow: auto;
+        padding-bottom: 30px;
+      }
+      .menu-text {
+        color: #2ed94d;
+        font-size: 20px;
+        font-family: 'roboto';
+      }
+      .menu-cls {
+        height: 40px;
+        width: 100px;
+        margin-top: 15px;
+        margin-right: 20px;
+        border-width: 0px;
+        border: 0;
+      }
+      .navbar {
+        background-color: white;
+        color: white;
+
+        width: 100%;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+
+      }
+      .heads-aligning {
+          display: flex;
+          flex-direction: column;
+          margin-left: 20px;
+      }
+      .btn {
+          text-decoration: underline;
+          font-size: 15px;
+          color: black;
+          border: 0px;
+          border-radius: 0%;
+          background: none;
+      }
+      .explore-btn {
+          border-radius: 20px;
+          background-color: #2ed94d;
+          height: 40px;
+          color: white;
+          width: 160px;
+          font-family: 'lobster';
+          font-size: 20px;
+          border-width: 0px;
+          margin-bottom: 30px;
+          margin-right: 30px;
+      }
+      .make-orders {
+          border-radius: 20px;
+          background-color: #2ed94d;
+          height: 40px;
+          color: white;
+          width: 160px;
+          border-width: 0px;
+          font-size: 20px;
+          margin-bottom: 30px;
+      }
+      .navbar nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        box-shadow: 0px 8px 6px 0px #bfbfbf;
+        margin: 0 auto
+      }
+      .offer {
+          color: #e7e5ea;
+          font-size: 30px;
+          font-family: 'lobster';
+          font-weight: bold;
+          margin-bottom: 30px;
+      }
+      .logo img {
+        height: 60px;
+        margin-left: 20px;
+      }
+      .button-container {
+          display: flex;
+          flex-direction: row;
+      }
+      .nav-links {
+        list-style: none;
+        display: flex;
+        margin: 0;
+      }
+      .cardhead {
+          color: black;
+          font-size: 30px;
+          font-family: 'roboto';
+      }
+      .cardpara {
+          color: black;
+          font-size: 23px;
+          font-family: 'roboto';
+      }
+
+      .nav-links li {
+        margin: 0 15px;
+      }
+
+      .nav-links li a:hover {
+        background-color: #575757;
+        border-radius: 4px;
+      }
+
+      .head-vid-containeer{
+        display: flex;
+        flex-direction: column;
+      }
+      * {
+          box-sizing: border-box;
+      }
+
+      body {
+          margin: 0px;
+          height: 100vh;
+      }
+
+      .hide {
+          display: none;
+      }
+
+      .unhide {
+          display: inline;
+      }
+
+      .main-background{
+          background-color: white;
+          background-size: cover;
+          display: flex;
+          padding: 5px;
+          height: 100vh;
+          flex-direction: column;
+          color: #fff;
+      }
+
+      .cont h1 {
+          font-size: 46px;
+          text-align: center;
+          width: 50%;
+      }
+      .menu {
+              color: #fabd05;
+              font-family: 'roboto';
+          }
+          .main-head {
+              font-size: 90px;
+              color: black;
+
+              font-family: 'roboto';
+          }
+          .main-para {
+              font-size: 30px;
+              color: black;
+              
+              font-family: 'roboto';
+          }
+          .head-container {
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-start;
+              padding-top: 50px;
+              padding-left: 100px;
+          }
+          .c {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          border-radius: 15px;
+          margin: 10px;
+          width: 350px;
+          background-color: white;
+          border-radius: 8px;
+          margin: 10px;
+          padding: 10px;
+          }
+
+          .card {
+          display: flex;
+          align-items: center;
+          background-color: transparent;
+          flex-direction: row;
+          justify-content: center;
+          flex-wrap: wrap;
+          }
+          .images {
+              height: 200px;
+              width: 290px;
+              border-radius: 10px;
+          }
+      @media (min-width:769px) {
+        .head-vid-containeer{
+            display: flex;
+            flex-direction: row;
+            margin: 30px;
+        }
+        .head-container{
+            order: 0;
+            width: 50%;
+        }
+        .vid{
+            margin-top: 100px;
+            order: 1;
+            width: 50%;
+            height: 500px;
+
+        }
+        .cleaneatz-video {
+            border-radius: 10px;
+        }
+
+          nav {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+          }
+
+          .Navbar {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              height: 10vh;
+          }
+
+          .Navbar img {
+              padding: 10px;
+              height: 90px;
+              width: 90px;
+          }
+
+          .navlinks {
+              display: flex;
+              list-style: none;
+              justify-content: center;
+              align-items: center;
+              width: 100px;
+              height: 40px;
+          }
+
+          .main-background {
+              background-color: white;
+              background-size: cover;
+              display: flex;
+              height: 100vh;
+              flex-direction: column;
+              padding: 5px;
+              color: #fff;
+          }
+
+          .cont h1 {
+              font-size: 46px;
+              text-align: center;
+              width: 50%;
+          }
+
+          .menu {
+              color: #fabd05;
+              font-family: 'roboto';
+          }
+          .main-head {
+              font-size: 50px;
+              color: black;
+
+              font-family: 'roboto';
+          }
+          .btn {
+          text-decoration: underline;
+          font-size: 15px;
+          color: black;
+          border-radius: 0px;
+          border: 0px;
+          background: none;
+          border-radius: 0%;
+      }
+      }
+
+      @media (max-width: 768px) {
+        .head-vid-containeer {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .vid{
+            order: 0;
+        }
+          .head-container {
+            order: 1;
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-start;
+              padding-top: 50px;
+              padding-left: 100px;
+
+          }
+          .nav {
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+              align-items: center;
+          }
+          .logo {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+          }
+
+          .main-background {
+              background-color: white;
+              background-size: cover;
+              display: flex;
+              height: 100vh;
+              flex-direction: column;
+              color: #fff;
+              padding: 5px;
+          }
+
+          .cont h1 {
+              font-size: 26px;
+              text-align: center;
+              width: 80%;
+          }
+          .Navbar img {
+              padding: 10px;
+
+          }
+
+          .Navbar a {
+              display: block;
+              justify-content: space-between;
+              border: 1px solid #e7e5ea;
+              margin-bottom: 20px;
+              font-size: 20px;
+          }
+          .Navbar button {
+              border: 0px;
+              background: none;
+              padding: 10px 15px;
+              border-color: #ffdda9;
+              border: 0;
+              border-radius: 20px;
+              text-decoration: underline;
+              font-size: 20px;
+              font-weight: 600;
+          }
+          .menu {
+              color: #fabd05;
+              font-family: 'roboto';
+          }
+          .main-head {
+              font-size: 50px;
+              color: black;
+              font-family: 'roboto';
+          }
+          .btn {
+          text-decoration: underline;
+          font-size: 15px;
+          color: black;
+          border-radius: 0%;
+          border: 0px;
+          background: none;
+      }
+      .vid {
+          height: 20vh;
+          width: 100vw;
+      }
+      }
+    </style>
+
+    <div class="color-background">
+      <header class="navbar">
+        <nav>
+          <div class="logo">
+            <a href="#home">
+              <img
+                src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=250,fit=crop,q=95/dJoJjLgZEPU99Dor/cleaneatz_logo-AzGrqLWx0eUDDLg4.png"
+                alt="CleanEats Logo"
+              />
+            </a>
+          </div>
+          <div class="nav-links">
+            <h1 for="menu">Menu</h1>
+            <select class="menu-cls" id="menu">
+              <option value="Home">Home</option>
+              <option value="Blog">Blog</option>
+              <option value="Recipes Page">Recipes Page</option>
+              <option value="About Us">About Us</option>
+              <option value="User Account">User Account</option>
+              <option value="Shopping Cart">Shopping Cart</option>
+              <option value="Contact">Contact</option>
+            </select>
+          </div>
+        </nav>
+       
+      </header>
+      <div class="color-background">
+        <div class="main-background">
+          <div class="head-vid-containeer">
+            <div class="head-container">
+              <h1 class="main-head">
+                Welcome to CleanEats: <br />
+                Your Destination for Healthy <br />
+                Living and Eating
+              </h1>
+              <p class="main-para">
+                CleanEatz is a brand dedicated to providing wholesome and
+                nutritious food products, focusing on millets and nuts to create
+                tasty and healthy malt mixes.
+              </p>
+              <div class="button-container">
+                <button class="explore-btn">Explore</button>
+                <button class="make-orders">Make Orders</button>
+              </div>
+            </div>
+            <div class="vid">
+                <video class="cleaneatz-video" width="700" height="340" autoplay muted looop>
+                    <source
+                      src="C:\Users\veeru\OneDrive\Pictures\Saved Pictures\cleaneatz.mp4"
+                      type="video/mp4"
+                    />
+                    <source src="movie.ogg" type="video/ogg" />
+                    Your browser does not support the video tag.
+                  </video>
+            </div>
+            
+        </div>
+  //courosel
+        <div>
+            <div class="tourism3-detailed-view-card-container">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://cdn-prod.medicalnewstoday.com/content/images/articles/320/320865/various-fruits-and-vegetables-that-are-considered-clean-eating.jpg" class="c-image" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://i0.wp.com/images-prod.healthline.com/hlcmsresource/images/AN_images/ways-to-eat-clean-1296x728-feature.jpg?w=1155&h=989" class="c-image" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxR5nkJGAwPvyplXdHTGfi9NJ-Rv44KvQiLw&s" class="c-image" alt="...">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <div class="tourism3-detailed-view-text-container">
+                    <h1 class="tourism3-detailed-view-text-container-head">Whitsunday Islands </h1>
+                    <p class="tourism3-detailed-view-text-container-paragraph">The 74 Whitsunday Islands lie between the northeast coast of Queensland, Australia, and the Great Barrier Reef, a massive stretch of coral teeming with marine life. Most of the islands are uninhabited. They're characterized by dense rainforest, hiking trails and white sand beaches. The town of Airlie Beach on the mainland is the region's central hub.... </p>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+          <div>
+            <div class="card">
+              
+              <div class="c">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi75kaBb5nC57YErjSJn6T_E37qXLrhZSE1g&s"
+                  class="images"
+                />
+                <div class="heads-aligning">
+                  <h1 class="cardhead">Health Conscious</h1>
+                  <p class="cardpara">
+                    Being health conscious involves making informed choices to promote overall well-being through balanced nutrition. It enhances quality of life and helps prevent illnesses.
+                  </p>
+                  <button class="explore-btn">Explore More</button>
+                </div>
+              </div>
+              <div class="c">
+                <img
+                  src="https://png.pngtree.com/thumb_back/fw800/background/20230505/pngtree-fitness-enthusiasts-unite-a-team-of-young-men-and-women-pumping-iron-in-a-group-exercise-session-photo-image_51939704.jpg"
+                  class="images"
+                />
+                <div class="heads-aligning">
+                  <h1 class="cardhead"> Fitness enthusiasts</h1>
+                  <p class="cardpara">
+                    Providing nutrient-rich, high-protein foods to support muscle growth, energy levels, and overall performance for those dedicated to fitness.
+                  </p>
+                  <button class="explore-btn">Explore More</button>
+                </div>
+              </div>
+              <div class="c">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_8MQPfzulB-HypQN9P6Vt7uwhU6pV3vJYvQ&s"
+                  class="images"
+                />
+                <div class="heads-aligning">
+                  <h1 class="cardhead">Dietary restrictions</h1>
+                  <p class="cardpara">
+                    Catering to specific dietary needs, including gluten-free, dairy-free, and vegan options, ensuring everyone can enjoy delicious and safe meals.
+                  </p>
+                  <button class="explore-btn">Explore More</button>
+                </div>
+              </div>
+              <div class="c">
+                <img
+                  src="https://studyfinds.org/wp-content/uploads/2021/01/pexels-cottonbro-4720402.jpg"
+                  class="images"
+                />
+                <div class="heads-aligning">
+                  <h1 class="cardhead"> Healthy Eating</h1>
+                  <p class="cardpara">
+                    Healthy eating involves consuming a balanced diet rich in Healthy diet. It can enhance energy and reduce the risk of chronic diseases.
+                  </p>
+                  <button class="explore-btn">Explore More</button>
+                </div>
+              </div>
+              <div class="c">
+                <img
+                  src="https://domf5oio6qrcr.cloudfront.net/medialibrary/7549/conversions/22e39d95-7639-4bd8-9635-44b0dd479265-thumb.jpg"
+                  class="images"
+                />
+                <div class="heads-aligning">
+                  <h1 class="cardhead">Clean Food</h1>
+                  <p class="cardpara">
+                    Clean food involves consuming minimally processed, natural ingredients that are free from additives and preservatives, promoting health through nutrient-dense choices and supporting overall well-being.
+                  </p>
+                  <button class="explore-btn">Explore More</button>
+                </div>
+              </div>
+              <div class="c">
+                <img
+                  src="https://healthwire.pk/wp-content/uploads/2022/06/heart-healthy-drinks.jpg"
+                  class="images"
+                />
+                <div class="Healthy Drinks">
+                  <h1 class="cardhead">Cool Shakes</h1>
+                  <p class="cardpara">
+                    Healthy drinks are beverages like water, herbal teas, and fresh juices that hydrate the body and provide essential nutrients without added sugars or artificial ingredients, supporting overall health and well-being.
+                  </p>
+                  <button class="explore-btn">Explore More</button>
+                </div>
+              </div>
+            </div>
+            <div class="bottom-container">
+                <div>
+                    <h1>Thanks For visit</h1>
+                    <i class="fi fi-rr-following"></i>
+                </div>
+            </div>
+
+          </div>
+          
+        
+      </div>
+      
+
+      </div>
+    </div>
+  </body>
+</html>
